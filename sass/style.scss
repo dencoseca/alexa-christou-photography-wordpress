@@ -1,0 +1,394 @@
+/* 
+  Theme Name: Alexa Christou Photography
+  Author: Leon Brown
+  Version: 1.0
+*/
+// =================
+// GENERAL
+// =================
+
+$yellow: rgb(255, 204, 0);
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/Montserrat-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('fonts/Montserrat/Montserrat-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato/Lato-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato Light';
+  src: url('fonts/Lato/Lato-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Monoton';
+  src: url('fonts/Monoton/Monoton-Regular.ttf');
+  font-weight: 400;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+// make body unscrollable when full page menu is open
+.fixed-position {
+  position: fixed;
+}
+
+// =================
+// FRONT PAGE
+// =================
+
+.front-page {
+  &--background {
+    height: 100vh;
+    width: 100vw;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--brand {
+    font-family: 'Monoton';
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    color: $yellow;
+    opacity: 0;
+    margin-bottom: 2rem;
+  }
+
+  &--nav {
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &--link {
+    font-size: 2rem;
+    font-family: 'Montserrat Bold';
+    margin-top: 1rem;
+    opacity: 0;
+
+    a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.1s ease-in;
+      letter-spacing: 0.6rem;
+      margin-left: 0.6rem;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+// =================
+// NAVIGATION
+// =================
+
+// MAIN NAVBAR
+.navbar {
+  padding: 1rem 2rem;
+  width: 100%;
+  z-index: 998;
+
+  &.opaque {
+    background-color: white !important;
+  }
+
+  &-brand {
+    text-transform: uppercase;
+    font-size: 3rem;
+    transition: color 0.1s ease-in;
+    font-family: 'Monoton';
+    color: $yellow !important;
+  }
+
+  &-nav {
+    margin-left: auto;
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    transition: color 0.1s ease-in;
+
+    &:hover {
+      color: $yellow !important;
+    }
+  }
+
+  &-toggler {
+    color: $yellow !important;
+    font-size: 2rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// MAIN NAVBAR ANIMATIONS
+.smart-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+// FULL PAGE MENU
+.full-page {
+  &--wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 997;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+
+    &.closed {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  &--nav {
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &--link {
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-family: 'Montserrat Bold';
+
+    a {
+      text-decoration: none;
+      color: white;
+      letter-spacing: 0.6rem;
+      margin-left: 0.6rem;
+      transition: color 0.1s ease-in;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+// =================
+// PAGE
+// =================
+
+.page {
+  &--hero {
+    height: 90vh;
+    background-position: top;
+    background-size: cover;
+    opacity: 0;
+  }
+
+  &--title-wrapper {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  &--arrow {
+    cursor: pointer;
+    position: relative;
+    font-size: 2rem;
+    transition: color 0.1s ease-in;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  &--title {
+    text-transform: uppercase;
+    font-family: 'Montserrat Bold';
+    font-size: 5rem;
+    position: relative;
+  }
+
+  &--text {
+    max-width: 800px;
+    color: #3f3f3f;
+    line-height: 2.6rem;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    font-family: 'Lato Light', sans-serif;
+    text-align: justify;
+  }
+}
+
+.footer {
+  margin-top: 6rem;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem;
+  border-top: 1px solid rgb(228, 228, 228);
+
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      margin: 10px;
+
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Montserrat', serif;
+        color: grey;
+        transition: color 0.1s ease-in;
+
+        &:hover {
+          color: $yellow !important;
+        }
+      }
+    }
+  }
+
+  &--external-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  &--external-link {
+    margin: 0 25px;
+    font-size: 0.7rem;
+  }
+
+  p,
+  a {
+    color: grey;
+    margin-top: 15px;
+    font-family: 'Lato', sans-serif;
+    transition: color 0.1s ease-in;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: $yellow !important;
+    }
+  }
+}
+
+// =================
+// RESPONSIVE
+// =================
+
+@media all and (max-width: 1200px) {
+  .front-page {
+    &--brand {
+      font-size: 3rem;
+    }
+
+    &--link {
+      font-size: 1.5rem;
+    }
+  }
+
+  .navbar {
+    padding: 0.5rem 1.5rem;
+
+    &-brand {
+      font-size: 2rem;
+    }
+  }
+
+  .full-page {
+    &--link {
+      font-size: 1.5rem;
+    }
+  }
+
+  .page {
+    &--title-wrapper {
+      padding: 0 1.5rem;
+    }
+
+    &--arrow {
+      font-size: 1.5rem;
+    }
+
+    &--title {
+      font-size: 2rem;
+    }
+
+    &--text {
+      line-height: 2rem;
+      font-size: 0.9rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .footer {
+    margin-top: 2rem;
+    border-top: none;
+
+    ul {
+      display: block;
+    }
+
+    &--external-links {
+      flex-direction: column;
+    }
+  }
+}

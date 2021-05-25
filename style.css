@@ -1,0 +1,254 @@
+/* 
+  Theme Name: Alexa Christou Photography
+  Author: Leon Brown
+  Version: 1.0
+*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url("fonts/Montserrat/Montserrat-Regular.ttf");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url("fonts/Montserrat/Montserrat-Bold.ttf");
+  font-weight: 700; }
+@font-face {
+  font-family: 'Lato';
+  src: url("fonts/Lato/Lato-Regular.ttf");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Lato Light';
+  src: url("fonts/Lato/Lato-Light.ttf");
+  font-weight: 300; }
+@font-face {
+  font-family: 'Monoton';
+  src: url("fonts/Monoton/Monoton-Regular.ttf");
+  font-weight: 400; }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body,
+html {
+  height: 100%;
+  width: 100%; }
+
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+.fixed-position {
+  position: fixed; }
+
+.front-page--background {
+  height: 100vh;
+  width: 100vw;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+.front-page--brand {
+  font-family: 'Monoton';
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  color: #ffcc00;
+  opacity: 0;
+  margin-bottom: 2rem; }
+.front-page--nav {
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center; }
+.front-page--link {
+  font-size: 2rem;
+  font-family: 'Montserrat Bold';
+  margin-top: 1rem;
+  opacity: 0; }
+  .front-page--link a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.1s ease-in;
+    letter-spacing: 0.6rem;
+    margin-left: 0.6rem; }
+    .front-page--link a:hover {
+      color: #ffcc00; }
+
+.navbar {
+  padding: 1rem 2rem;
+  width: 100%;
+  z-index: 998; }
+  .navbar.opaque {
+    background-color: white !important; }
+  .navbar-brand {
+    text-transform: uppercase;
+    font-size: 3rem;
+    transition: color 0.1s ease-in;
+    font-family: 'Monoton';
+    color: #ffcc00 !important; }
+  .navbar-nav {
+    margin-left: auto; }
+  .navbar .nav-link {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    transition: color 0.1s ease-in; }
+    .navbar .nav-link:hover {
+      color: #ffcc00 !important; }
+  .navbar-toggler {
+    color: #ffcc00 !important;
+    font-size: 2rem; }
+    .navbar-toggler:focus {
+      outline: none; }
+
+.smart-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0; }
+
+.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out; }
+
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out; }
+
+.full-page--wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 997;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-out; }
+  .full-page--wrapper.closed {
+    opacity: 0;
+    transform: translateX(100%); }
+.full-page--nav {
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center; }
+.full-page--link {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-family: 'Montserrat Bold'; }
+  .full-page--link a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.6rem;
+    margin-left: 0.6rem;
+    transition: color 0.1s ease-in; }
+    .full-page--link a:hover {
+      color: #ffcc00; }
+
+.page--hero {
+  height: 90vh;
+  background-position: top;
+  background-size: cover;
+  opacity: 0; }
+.page--title-wrapper {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem; }
+.page--arrow {
+  cursor: pointer;
+  position: relative;
+  font-size: 2rem;
+  transition: color 0.1s ease-in; }
+  .page--arrow:hover {
+    color: #ffcc00; }
+.page--title {
+  text-transform: uppercase;
+  font-family: 'Montserrat Bold';
+  font-size: 5rem;
+  position: relative; }
+.page--text {
+  max-width: 800px;
+  color: #3f3f3f;
+  line-height: 2.6rem;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  font-family: 'Lato Light', sans-serif;
+  text-align: justify; }
+
+.footer {
+  margin-top: 6rem;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem;
+  border-top: 1px solid #e4e4e4; }
+  .footer ul {
+    list-style: none;
+    display: flex; }
+    .footer ul li {
+      margin: 10px; }
+      .footer ul li a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Montserrat', serif;
+        color: grey;
+        transition: color 0.1s ease-in; }
+        .footer ul li a:hover {
+          color: #ffcc00 !important; }
+  .footer--external-links {
+    display: flex;
+    justify-content: center; }
+  .footer--external-link {
+    margin: 0 25px;
+    font-size: 0.7rem; }
+  .footer p,
+  .footer a {
+    color: grey;
+    margin-top: 15px;
+    font-family: 'Lato', sans-serif;
+    transition: color 0.1s ease-in; }
+  .footer a {
+    text-decoration: none; }
+    .footer a:hover {
+      color: #ffcc00 !important; }
+
+@media all and (max-width: 1200px) {
+  .front-page--brand {
+    font-size: 3rem; }
+  .front-page--link {
+    font-size: 1.5rem; }
+
+  .navbar {
+    padding: 0.5rem 1.5rem; }
+    .navbar-brand {
+      font-size: 2rem; }
+
+  .full-page--link {
+    font-size: 1.5rem; }
+
+  .page--title-wrapper {
+    padding: 0 1.5rem; }
+  .page--arrow {
+    font-size: 1.5rem; }
+  .page--title {
+    font-size: 2rem; }
+  .page--text {
+    line-height: 2rem;
+    font-size: 0.9rem;
+    margin-bottom: 3rem; }
+
+  .footer {
+    margin-top: 2rem;
+    border-top: none; }
+    .footer ul {
+      display: block; }
+    .footer--external-links {
+      flex-direction: column; } }
