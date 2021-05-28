@@ -25,6 +25,6 @@ I wanted to try coding with PHP since I focus on full-stack JavaScript developme
 
 ## Skills Gained
 
-    * Wordpress
-    * PHP
-    * Awareness of concepts shared across different programming languages.
+        * Wordpress
+        * PHP
+        * Awareness of concepts shared across different programming languages
