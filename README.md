@@ -11,10 +11,6 @@ The focus here is on simplicity, and giving the full stage to the stunning lands
 - jQuery
 - SASS
 
-#### Live link
-
-[Alexa Christou Photography](http://www.alexachristouphotography.com/)
-
 ## Status
 
 Complete, but with plans to rebuild in Gatsby using either Wordpress or Contentful as a headless CMS.
